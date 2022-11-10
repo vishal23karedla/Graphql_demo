@@ -1,6 +1,8 @@
 type Query {
     bookById(id: ID): Book
-
+#    dummy queries
+    hello : String
+    sum (a: Int, b: Int) : Int
 }
 
 type Book {

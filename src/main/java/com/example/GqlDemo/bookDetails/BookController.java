@@ -7,6 +7,17 @@ import org.springframework.stereotype.Controller;
 
 @Controller
 public class BookController {
+
+    @QueryMapping
+    public String hello(){
+        return "Hello GraphQL users!" ;
+    }
+
+    @QueryMapping
+    public int sum(@Argument int a,@Argument int b){
+        return (a+b);
+    }
+
     @QueryMapping
     public Book bookById(@Argument String id) {
         return Book.getById(id);
