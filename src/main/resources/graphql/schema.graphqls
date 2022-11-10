@@ -1,0 +1,27 @@
+type Query {
+    bookById(id: ID): Book
+
+}
+
+type Book {
+    id: ID
+    name: String
+    pageCount: Int
+    author: Author
+    publication : Publication
+}
+
+type Author {
+    id: ID
+    firstName: String
+    lastName: String
+}
+
+type Publication{
+    id : ID
+    publisherName : String
+    establishedYear : String
+}
+
+
+#The Domain Specific Language (shown above) used to describe a schema is called the Schema Definition Language or SDL.
